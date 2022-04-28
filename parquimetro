@@ -1,0 +1,23 @@
+import os
+
+print ("\nCrear un registro")
+print ("================")
+
+NOMBRE_ARCHIVO = 'datos.txt'
+
+archivo = open(NOMBRE_ARCHIVO, 'w') # abre el archivo datos.txt
+archivo.write('''Ruddy Gomez\tpinki\t*****\t75482158\t5190 IIG\tUPSA\n .''')
+archivo.write('''Julian gomez\topa\t*****\t75482158\t5190 IIG\tUPSA\n .''')
+archivo.write('''mario cortez\tbruto\t*****\t75482158\t5190 IIG\tUPSA\n .''')
+archivo.write('''Valentina RICALDE\tsonso\t*****\t75482158\t5190 IIG\tUPSA\n .''')
+archivo.write('''Andres nina\tinteligente\t*****\t75482158\t5190 IIG\tUPSA\n .''')
+
+
+archivo.close()
+
+if NOMBRE_ARCHIVO in os.listdir("."):
+    print ("\nArchivo creado en la ruta: \n\n\t{0}/{1}".format(
+        os.getcwd(), NOMBRE_ARCHIVO))
+else:
+    print ("El archivo no fue creado!!!\n")
+
